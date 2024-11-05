@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+      Author: Jae Choi
+      Date: Oct 23, 2023
+      Filename:form.html
+   -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/oform.css" />
+    <title>COMP2681 Assignment 3 - contact me</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="first_page.html" title="home">
+          <img
+            src="images/heading_color.png"
+            alt="Website Heading"
+            class="heading-image"
+          />
+        </a>
+        <button onclick="location.href='first_page.html'">Home</button>
+        <button onclick="location.href='#about'">About</button>
+        <button onclick="location.href='form.html'">Contact</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="form">
+        <form
+          name="cOrder"
+          id="cOrder"
+          onsubmit="processDate(event)"
+          method="POST"
+        >
+          <h1>Contact Information</h1>
+
+          <label for="fName">First Name:</label>
+          <input type="text" id="fName" name="fName" required />
+
+          <label for="lName">Last Name:</label>
+          <input type="text" id="lName" name="lName" required />
+
+          <label for="street">Street Address:</label>
+          <input type="text" id="street" name="street" required />
+
+          <label for="city">City:</label>
+          <input type="text" id="city" name="city" required />
+
+          <label for="province">Province:</label>
+          <input type="text" id="province" name="province" required />
+
+          <label for="poscode">Postal Code:</label>
+          <input
+            type="text"
+            id="poscode"
+            name="poscode"
+            required
+            pattern="[A-Za-z]\d[A-Za-z] ?\d[A-Za-z]\d"
+            placeholder="A1B 2C3"
+          />
+
+          <label for="phone">Phone Number:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+            pattern="\d{3}-\d{3}-\d{4}"
+            placeholder="123-456-7890"
+          />
+
+          <label for="category">Category:</label>
+          <select id="category" name="category">
+            <option value="Student">Student</option>
+            <option value="Parent">Parent</option>
+            <option value="Dancer">Dancer</option>
+            <option value="Performer">Performer</option>
+          </select>
+
+          <label for="contactme">
+            <input type="checkbox" id="contactme" name="contactme" /> Please
+            Contact me
+          </label>
+
+          <label for="comments">Additional Information/Comments:</label>
+          <textarea id="comments" name="comments" rows="4"></textarea>
+
+          <button class="submit-button" type="submit">Submit Details</button>
+          <button class="reset-button" type="reset">Cancel Details</button>
+        </form>
+      </section>
+      <section id="result"></section>
+    </main>
+
+    <footer>
+      <p>TRU COMP2681 assignments, Jae Choi © 2024</p>
+      <div class="color-scheme-01"></div>
+      <div class="color-scheme-02"></div>
+      <div class="color-scheme-03"></div>
+      <div class="color-scheme-04"></div>
+      <div class="color-scheme-05"></div>
+    </footer>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

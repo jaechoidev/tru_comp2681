@@ -1,3 +1,10 @@
+/*
+Author: Jae Choi
+Date: Oct 23, 2024
+Filename:styles.css
+*/
+
+
 /* Color Template */
 :root {
     --primary-color: #fdd300;  
@@ -63,10 +70,6 @@ nav button {
 	outline: inherit;
     color: var(--text-color);
     text-align: center;
-    -webkit-box-shadow: 0px 0px 0px var(--shadow-color); /* Chrome, Safari */
-    -moz-box-shadow: 0px 0px 0px var(--shadow-color);    /* Firefox */
-    box-shadow: 0px 0px 0px var(--shadow-color);         /* Standard */
-
 }
 
 button:hover{
@@ -310,4 +313,12 @@ footer > p{
 }
 .color-scheme-05{
     background-color: var(--subtext-color);
+}
+
+
+#result > p{
+    border-radius: 10px;
+    padding: 10px;
+    background-color: var(--text-color);
+    color: var(--background-color);
 }
